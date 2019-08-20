@@ -4,7 +4,10 @@ MAINTAINER Nguyen Tuan Giang "https://github.com/ntuangiang"
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y apt-utils gcc g++ git curl build-essential gdb gdbserver rsync vim
+    && apt-get install -y apt-utils libssl-dev \
+        gcc g++ gdb gdbserver build-essential \
+        git curl rsync vim \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/Kitware/CMake.git
 
