@@ -18,6 +18,7 @@ RUN ln -s /usr/local/bin/cmake /usr/bin/cmake
 
 COPY . /root/
 
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN rm -rf CMake
 
 EXPOSE 7777
