@@ -4,7 +4,7 @@ MAINTAINER Nguyen Tuan Giang "https://github.com/ntuangiang"
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y apt-utils libssl-dev \
+    && apt-get install -y apt-utils libssl-dev libboost-all-dev \
         gcc g++ gdb gdbserver build-essential \
         git curl rsync vim \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
