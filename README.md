@@ -4,7 +4,7 @@
 
 # Cpp
 
-[https://en.cppreference.com](https://en.cppreference.com/w/) A C++ program is a sequence of text files (typically header and source files) that contain declarations. They undergo translation to become an executable program, which is executed when the C++ implementation calls its main function.
+A [C++](https://en.cppreference.com/w/) program is a sequence of text files (typically header and source files) that contain declarations. They undergo translation to become an executable program, which is executed when the C++ implementation calls its main function.
 
 ## Docker Repository
 [ntuangiang/cpp](https://hub.docker.com/r/ntuangiang/cpp) 
