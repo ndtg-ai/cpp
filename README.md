@@ -8,12 +8,28 @@ A [C++](https://en.cppreference.com/w/) program is a sequence of text files (typ
 
 ## Docker Repository
 [ntuangiang/cpp](https://hub.docker.com/r/ntuangiang/cpp) 
-## Usage
-- Start Services
 
-```yml
-docker run -d -p 2202:22 -p 7777:7777 ntuangiang/cpp
+## Usage
+- Start services
+
+```shell script
+docker run -d -p 2202:22 -p 7778:7777 ntuangiang/cpp
 ```
+
+- Docker compose
+
+```yaml
+version: "3.8"
+
+services:
+  cpp:
+    image: ntuangiang/cpp # Image latest
+    ports:
+      - "2202:22" # Remote
+      - "7778:7777" # Debug
+    restart: always
+```
+
 ## LICENSE
 
 MIT License
