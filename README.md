@@ -12,7 +12,7 @@ A [C++](https://en.cppreference.com/w/) program is a sequence of text files (typ
 - Start Services
 
 ```yml
-docker run -d -p 2202:22 -p 7777:7777 ntuangiang/opencv-mongo-cpp
+docker run -d -p 2202:22 -p 7777:7777 ntuangiang/cpp
 ```
 ## LICENSE
 
