@@ -4,7 +4,7 @@
 
 # Cpp
 
-[https://devdocs.magento.com](https://devdocs.magento.com) Meet the small business, mid-sized business, and enterprise-level companies who are benefiting from the power and flexibility of Magento on their web stores. We built the eCommerce platform, so you can build your business.
+[https://en.cppreference.com](https://en.cppreference.com/w/) A C++ program is a sequence of text files (typically header and source files) that contain declarations. They undergo translation to become an executable program, which is executed when the C++ implementation calls its main function.
 
 ## Docker Repository
 [ntuangiang/cpp](https://hub.docker.com/r/ntuangiang/cpp) 
