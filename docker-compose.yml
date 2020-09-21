@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  cpp:
+    image: ntuangiang/cpp # Image latest
+    environment:
+      - DISPLAY=:0.0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    ports:
+      - "2202:22" # Remote
+      - "7778:7777" # Debug
+    restart: always
