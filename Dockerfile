@@ -2,13 +2,10 @@ FROM ntuangiang/ubuntu-ssh:latest
 
 MAINTAINER Nguyen Tuan Giang "https://github.com/ntuangiang"
 
-RUN apk add --no-cache libstdc++ g++ gtk+3.0 boost dbus xauth xhost make cmake gdb \
- && rm -rf /var/cache/apk/*
+ENV DISPLAY=:0.0
 
-# Build Dependency
-RUN apk add --no-cache --virtual build-deps \
-    build-base gtk+3.0-dev boost-dev pkgconfig \
- && rm -rf /var/cache/apk/* \
- && apk del build-deps
+RUN apk add --no-cache make cmake gdb pkgconfig \
+ libstdc++ g++ gtk+3.0-dev boost-dev \
+ && rm -rf /var/cache/apk/*
 
 EXPOSE 7777
