@@ -2,22 +2,10 @@ FROM ntuangiang/ubuntu-ssh:latest
 
 MAINTAINER Nguyen Tuan Giang "https://github.com/ntuangiang"
 
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && apt-get install -y apt-utils libssl-dev libboost-all-dev \
-        gcc g++ gdb gdbserver build-essential \
-        git curl rsync vim \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache libstdc++ g++ dbus xauth xhost cmake gdb \
+ && rm -rf /var/cache/apk/*
 
-RUN git clone https://github.com/Kitware/CMake.git
-
-RUN cd CMake \
-    && ./bootstrap && make && make install
-
-RUN ln -s /usr/local/bin/cmake /usr/bin/cmake
-
-COPY . /root/
-
-RUN rm -rf CMake
+RUN apk add --no-cache --virtual gtk+3.0-dev boost-dev pkgconfig \
+ && rm -rf /var/cache/apk/*
 
 EXPOSE 7777
