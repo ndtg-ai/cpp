@@ -4,8 +4,9 @@ MAINTAINER Nguyen Tuan Giang "https://github.com/ntuangiang"
 
 ENV DISPLAY=:0.0
 
-RUN apk add --no-cache make cmake gdb pkgconfig \
+RUN apk add --no-cache make cmake gdb ninja pkgconf rsync coreutils \
     libstdc++ g++ gtk+3.0-dev boost-dev \
+    clang gflags \
  && rm -rf /var/cache/apk/*
 
 EXPOSE 7777
